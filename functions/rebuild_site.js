@@ -1,6 +1,9 @@
 const axios = require("axios");
 
 exports.handler = async function(event, context, callback) {
+    if (event.httpMethod !== "POST") {
+        return { statusCode: 404, body: {} }
+    }
     const body = {
         "event_type": "kontent_publish",
         "client_payload": {
