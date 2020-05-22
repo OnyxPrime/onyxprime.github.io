@@ -24,7 +24,7 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
     - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@3.4.9
+      uses: JamesIves/github-pages-deploy-action@3.5.2
       with:        
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: master
