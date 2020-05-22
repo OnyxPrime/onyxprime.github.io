@@ -15,7 +15,7 @@ const About = () => (
                 </div>                           
                 
                 <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mdc-layout-grid__cell--align-center">
-                    <img style={{display:`block`, marginLeft: `auto`, marginRight: `auto`, marginBottom: '0', border: `none`}} src="./LogoWriter.png" alt="Image of LOGO programming screen" />
+                    <img style={{display:`block`, marginLeft: `auto`, marginRight: `auto`, marginBottom: '0', border: `none`}} src="./LogoWriter.png" alt="LOGO programming screen" />
                     <p style={{textAlign: `center`, margin: `0`}}>Logo (http://www.chris-granger.com/2012/10/05/all-ideas-are-old-ideas/)</p>
                 </div>                           
                 

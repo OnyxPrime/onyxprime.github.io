@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => (
             <h2>Blog</h2>
             <ul>
               {data.allKontentItemBlog.edges.map(({ node }) => (
-                <li>
+                <li key={node.id}>
                 <Link className="sectionLinks" to={node.fields.slug}>
                   <h3>{node.elements.blog_title.value}</h3>
                   <p>{node.elements.publish_date.value}</p>   
@@ -38,7 +38,7 @@ const IndexPage = ({ data }) => (
             <h2>Speaking</h2>
             <ul>            
               {data.allKontentItemSpeakingEngagements.edges.map(({ node }) => (
-                <li>
+                <li key={node.id}>
                   <a className="sectionLinks" href={node.elements.link_to_event_site.value}>
                     {node.elements.name_of_event.value}
                   </a>
