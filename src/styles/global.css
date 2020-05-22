@@ -1,0 +1,37 @@
+html {
+    font-family: "-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif";
+}
+
+.sectionLinks {
+    font-size: 1.25rem;
+    color: #0275d8;
+    text-decoration: none;
+}
+
+.sectionLinks h3 {
+    font-Size: 1.25rem; 
+    color: #0275d8; 
+    margin-bottom: 0; 
+    font-weight: normal;
+}
+
+.sectionLinks p {
+    font-size: .75rem; 
+    font-style: italic;
+}
+
+.sectionHeader h2 {
+    color: #159957; 
+    font-weight: normal; 
+    font-size: 2rem;
+}
+
+.sectionHeader ul {
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0;
+}
+
+.sectionHeader li p {    
+    font-size: .75rem;
+}
