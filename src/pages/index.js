@@ -54,32 +54,8 @@ const IndexPage = ({ data }) => (
       <div className="mdc-layout-grid">
         <div className="mdc-layout-grid__inner">
           <div className={"mdc-layout-grid__cell mdc-layout-grid__cell--span-12 sectionHeader " + indexStyles.liveStreamSection}>
-            <h2>Live Stream</h2>
-            <div>
-              <p>Yep, you heard it right: I've started live streaming!</p>
-              <p>We'll be exploring tools, technologies and practices used in software development to make developers more productive <b><i><u>LIVE!</u></i></b></p>
-              <ul>
-                  <li>Desktop</li>
-                  <li>Web</li>
-                  <li>Mobile</li>
-                  <li>Cloud</li>
-                  <li>Agile</li>
-                  <li>DevOps</li>
-                  <li>...and so on</li>
-              </ul>
-              <span>Come join me on this little adventure on </span> <a href="https://www.twitch.tv/developersgarage">Twitch</a> <span> every Wednesday at 12PM CST. I look forward to seeing you in the chat!</span>
-              <br /><br />
-              <p>If you can't make it, check it out on-demand on <a href="https://www.youtube.com/channel/UCp7TjW2p43aNzkMEBYJ8inw">YouTube</a>.</p>             
-              <p>Intersted in contributing to the projects, or want to try them for yourself, here's a link to our <a href="https://github.com/devsgarage">GitHub</a> repo where all our work is stored.
-              Any, and all, help is greatly appreciated!</p>
-              <ul>
-                  <li>Documetation</li>
-                  <li>styling</li>
-                  <li>coding</li>
-                  <li>etc.</li>
-              </ul>
-              <p>It's all fair game, and if you got suggestions for how to improve the stream, or questions in general, you can contact me at any of the methods at the bottom of the page.</p>
-            </div>
+            <h2>{data.kontentItemPageContent.elements.title.value}</h2>
+            <div dangerouslySetInnerHTML={{ __html:data.kontentItemPageContent.elements.body.resolvedData.html }} />
           </div>
         </div>
       </div>
@@ -90,7 +66,7 @@ export default IndexPage
 
 export const query = graphql`
 query MyQuery {
-  allKontentItemBlog {
+  allKontentItemBlog (sort: {fields: elements___publish_date___value, order: ASC}) {
     edges {
       node {
         id
@@ -108,7 +84,7 @@ query MyQuery {
       }
     }
   }
-  allKontentItemSpeakingEngagements {
+  allKontentItemSpeakingEngagements(sort: {order: ASC, fields: elements___start_date_of_event___value}) {
     edges {
       node {
         id
@@ -128,6 +104,19 @@ query MyQuery {
           link_to_event_site {
             value
           }
+        }
+      }
+    }
+  }
+  kontentItemPageContent(system: {codename: {eq: "ryans_live_stream_info"}}) {
+    id
+    elements {
+      title {
+        value
+      }
+      body {
+        resolvedData {
+          html
         }
       }
     }

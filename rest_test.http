@@ -1,2 +1,2 @@
-POST http://localhost:34567/rebuild_site
+POST http://localhost:53561/rebuild_site
 
