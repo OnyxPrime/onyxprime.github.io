@@ -1,2 +1,5 @@
-POST http://localhost:53561/rebuild_site
+//POST http://localhost:53561/rebuild_site
 
+
+
+POST https://agitated-wright-7adb6d.netlify.app/.netlify/functions/rebuild_site

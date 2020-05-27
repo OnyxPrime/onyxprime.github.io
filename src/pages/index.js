@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => (
             <ul>
               {data.allKontentItemBlog.edges.map(({ node }) => (
                 <li key={node.id}>
-                <Link className="sectionLinks" to={node.fields.slug}>
+                <Link className="sectionLinks" to={'blog/' + node.elements.url_slug.value}>
                   <h3>{node.elements.blog_title.value}</h3>
                   <p>{node.elements.publish_date.value}</p>   
                 </Link>               
@@ -77,9 +77,9 @@ query MyQuery {
           publish_date {
             value(formatString: "MMMM DD, YYYY")
           }
-        }
-        fields{
-          slug
+          url_slug {
+            value
+          }
         }
       }
     }

@@ -1,15 +1,5 @@
 const path = require(`path`)
-exports.onCreateNode = ({ node, actions }) => {
-    const { createNodeField } = actions;
-    if (node.internal.type === `kontent_item_blog`) {        
-        let name = node.elements.blog_title.value.replace(/ /g, '-').toLowerCase();
-        name = name.replace(':', '');
-        createNodeField({
-            node,
-            name: `slug`,
-            value: `/blog/${name}`
-        })
-      }
+exports.onCreateNode = ({ node, actions }) => {    
   }
 
   exports.createPages = async ({graphql, actions}) => {
@@ -20,8 +10,10 @@ exports.onCreateNode = ({ node, actions }) => {
               edges {
                 node {
                   id
-                  fields {
-                    slug
+                  elements {
+                    url_slug {
+                      value
+                    }
                   }
                 }
               }
@@ -30,7 +22,7 @@ exports.onCreateNode = ({ node, actions }) => {
       `)
       result.data.allKontentItemBlog.edges.forEach(({ node }) => {
           createPage({
-              path: node.fields.slug,
+              path: `blog/${node.elements.url_slug.value}`,
               component: path.resolve(`./src/templates/blog-post.js`),
               context: {
                   id: node.id,
