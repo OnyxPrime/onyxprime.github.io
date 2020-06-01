@@ -15,7 +15,9 @@ figcaption,
 figure,
 footer,
 header,
-main,
+main {
+  background-color: white;
+},
 menu,
 nav,
 section,
@@ -208,6 +210,7 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  background: lightgray;
 }
 img {
   max-width: 100%;

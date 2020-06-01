@@ -1,3 +1,6 @@
+.topSection {
+    padding-top: 2rem;
+}
 .liveStreamSection ul {
     list-style-type: disc;
     margin-left: 1.45rem;

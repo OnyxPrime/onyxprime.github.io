@@ -19,7 +19,7 @@ function getFormattedValue(start, end){
 }
 const IndexPage = ({ data }) => (
   <Layout>
-    <div className="mdc-layout-grid">
+    <div className={"mdc-layout-grid " + indexStyles.topSection}>
       <div className="mdc-layout-grid__inner"> 
           <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 sectionHeader">
             <h2>Blog</h2>

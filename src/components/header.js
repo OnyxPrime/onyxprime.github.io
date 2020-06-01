@@ -6,7 +6,7 @@ import "../../node_modules/@material/layout-grid/dist/mdc.layout-grid.css"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      marginBottom: `1.5rem`,
+     
       alignItems: `center`
     }}
   >
@@ -53,25 +53,16 @@ const Header = ({ siteTitle }) => (
     <div
       style={{
         margin: `0 auto`,
-        padding: `3rem 4rem`,
-        backgroundImage: `url(/binary_wallpaper_green_1500_1000.jpg)`,
+        padding: `1rem 1rem`,
+        backgroundImage: `url(/assets/black-gray.png)`,
+        backgroundSize: `30rem`
       }}
     >
-      <h1 style={{ margin: 0,
-            fontSize: `2.25rem`,
-            textAlign: `center` }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,   
-            fontWeight: `500`,         
-            fontFamily: `-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
-          }}
-        >
-          Developers Garage
-        </Link>
-      </h1>
+      <img style={{
+        margin: `auto`,
+        display: `block`,
+        height: `8rem`
+      }} src="/assets/developers-garage-color.png" alt="Developers Garage Logo" />
       <h2
           style={{
             color: `white`,
@@ -79,8 +70,12 @@ const Header = ({ siteTitle }) => (
             textAlign: `center`,  
             fontSize: `1.15rem`,   
             fontWeight: `normal`,  
-            opacity: `.7`     ,
-            fontFamily: `-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,}} >Exploring cool tech, dev practices and tools used in development</h2>
+            opacity: `.85`     ,
+            fontFamily: `-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
+            margin: `0rem`,
+            padding: `1rem 0rem`}} >
+              Exploring cool tech, dev practices and tools used in development
+      </h2>
     </div>
   </header>
 )
