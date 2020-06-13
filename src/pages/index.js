@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => (
   <Layout>
     <div className={"mdc-layout-grid " + indexStyles.topSection}>
       <div className="mdc-layout-grid__inner"> 
-          <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 sectionHeader">
+          <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 sectionHeader" style={{ borderStyle: `solid`, borderWidth: `0px 1px 0px 0px`, borderColor: `#f05623`}}>
             <h2>Blog</h2>
             <ul>
               {data.allKontentItemBlog.edges.map(({ node }) => (
@@ -51,6 +51,7 @@ const IndexPage = ({ data }) => (
           </div>
         </div>                
       </div>
+      <hr style={{margin: `0px 1rem`, opacity: `100%`, height: `1px`, background: `#f05623`}}/>
       <div className="mdc-layout-grid">
         <div className="mdc-layout-grid__inner">
           <div className={"mdc-layout-grid__cell mdc-layout-grid__cell--span-12 sectionHeader " + indexStyles.liveStreamSection}>

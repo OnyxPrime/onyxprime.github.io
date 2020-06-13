@@ -30,16 +30,25 @@ const Layout = ({ children }) => {
         style={{
           margin: `0 auto`,
           maxWidth: `60rem`,
-          padding: `0 1.0875rem 1.45rem`,
+          padding: `0 1.0875rem 0`,
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
       </div>
+        <footer style={{backgroundColor: `black`,
+        backgroundImage: `url(/assets/black-gray.png)`,
+        backgroundSize: `30rem`,
+          color: `white`, 
+          height: `4rem`, 
+          display: `flex`, 
+          alignItems: `center`,
+          justifyContent: `center`,
+          padding: `0 1.0875rem`,
+          fontSize: `80%`}}>
+          © Copyright {new Date().getFullYear()} 
+          ,&nbsp;
+          <span style={{color: `#f05623`}}>Developers Garage</span>.&nbsp;all rights reserved.
+        </footer>
     </>
   )
 }

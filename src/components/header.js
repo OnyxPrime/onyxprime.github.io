@@ -10,14 +10,14 @@ const Header = ({ siteTitle }) => (
       alignItems: `center`
     }}
   >
-    <nav style={{height: `54px`, backgroundColor: `lightgray`}}>
+    <nav style={{height: `54px`, backgroundColor: `#f05623`}}>
       <div className="mdc-layout-grid" style={{padding: `0`, height: `54px`}}>
         <div className="mdc-layout-grid__inner" style={{height: `54px`}}>
           <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-middle">            
             <div style={{ marginLeft: `4rem`, 
                         fontSize: `1.1rem`, fontFamily: `-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
-                        color: `darkslategray`, fontWeight: `bold`}}>
-              <Link to="/" style={{textDecoration: `none`, color: `darkslategray`, fontStyle: `none`}}>
+                        color: `black`, fontWeight: `bold`}}>
+              <Link to="/" style={{textDecoration: `none`, color: `black`, fontStyle: `none`}}>
               <img style={{height: `42px`, verticalAlign: `middle`, marginBottom: `0`}} src={`/me_small.png`} alt="hand drawn profile of Ryan" />
               Ryan Overton
               </Link>
@@ -28,7 +28,7 @@ const Header = ({ siteTitle }) => (
               <Link to="/about"
                     style={{    
                       margin: `0 10px 0 10px`,                
-                      color: `darkslategray`,
+                      color: `black`,
                       textDecoration: `none`,
                       fontFamily: `-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
                       fontSize: `.9rem`,
@@ -38,7 +38,7 @@ const Header = ({ siteTitle }) => (
               <Link to="/blog"
                     style={{    
                       margin: `0 10px 0 10px`,                
-                      color: `darkslategray`,
+                      color: `black`,
                       textDecoration: `none`,
                       fontFamily: `-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
                       fontSize: `.9rem`,
