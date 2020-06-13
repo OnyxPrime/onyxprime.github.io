@@ -11,11 +11,10 @@ const Header = ({ siteTitle }) => (
     }}
   >
     <nav style={{height: `54px`, backgroundColor: `#f05623`}}>
-      <div className="mdc-layout-grid" style={{padding: `0`, height: `54px`}}>
+      <div className="mdc-layout-grid" style={{padding: `0`, height: `54px`, maxWidth: `60rem`}}>
         <div className="mdc-layout-grid__inner" style={{height: `54px`}}>
           <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-middle">            
-            <div style={{ marginLeft: `4rem`, 
-                        fontSize: `1.1rem`, fontFamily: `-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
+            <div style={{ fontSize: `1.1rem`, fontFamily: `-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
                         color: `black`, fontWeight: `bold`}}>
               <Link to="/" style={{textDecoration: `none`, color: `black`, fontStyle: `none`}}>
               <img style={{height: `42px`, verticalAlign: `middle`, marginBottom: `0`}} src={`/me_small.png`} alt="hand drawn profile of Ryan" />
@@ -24,7 +23,7 @@ const Header = ({ siteTitle }) => (
             </div>
           </div>
           <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-middle">
-            <div style={{ display: `flex`, justifyContent: `flex-end`, marginRight: `4rem`}}>              
+            <div style={{ display: `flex`, justifyContent: `flex-end`}}>              
               <Link to="/about"
                     style={{    
                       margin: `0 10px 0 10px`,                
