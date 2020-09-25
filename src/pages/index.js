@@ -85,7 +85,7 @@ query MyQuery {
       }
     }
   }
-  allKontentItemSpeakingEngagements(sort: {order: ASC, fields: elements___start_date_of_event___value}) {
+  allKontentItemSpeakingEngagements(sort: {order: DESC, fields: elements___start_date_of_event___value}) {
     edges {
       node {
         id
