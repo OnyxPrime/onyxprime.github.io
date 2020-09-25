@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Developers Garage HQ`,
+    description: `Developers Garage HQ`,
+    author: `@ryano9791`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -30,13 +30,10 @@ module.exports = {
     {
       resolve: `@kentico/gatsby-source-kontent`,
       options: {
-        deliveryClientConfig: {
-          projectId: `896b8195-7879-004d-9b68-c601425142ac`,
-          typeResolvers: []
-         },
-         languageCodenames: [
+        projectId: `896b8195-7879-004d-9b68-c601425142ac`,
+        languageCodenames: [
            `default`,
-         ]
+        ]
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality

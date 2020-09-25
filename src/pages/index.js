@@ -56,7 +56,7 @@ const IndexPage = ({ data }) => (
         <div className="mdc-layout-grid__inner">
           <div className={"mdc-layout-grid__cell mdc-layout-grid__cell--span-12 sectionHeader " + indexStyles.liveStreamSection}>
             <h2>{data.kontentItemPageContent.elements.title.value}</h2>
-            <div dangerouslySetInnerHTML={{ __html:data.kontentItemPageContent.elements.body.resolvedData.html }} />
+            <div dangerouslySetInnerHTML={{ __html:data.kontentItemPageContent.elements.body.value }} />
           </div>
         </div>
       </div>
@@ -116,9 +116,7 @@ query MyQuery {
         value
       }
       body {
-        resolvedData {
-          html
-        }
+        value
       }
     }
   }

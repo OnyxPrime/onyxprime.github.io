@@ -39,13 +39,11 @@ export const query =
                 value(formatString: "MM/DD/YYYY")
               }
               content {
-                resolvedData {
-                  html
-                }
+                value
                 links {
-                  link_id: linkId
+                  link_id
                   codename
-                  urlSlug
+                  url_slug
                   type
                 }
                 value

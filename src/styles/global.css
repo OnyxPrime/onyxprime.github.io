@@ -4,13 +4,13 @@ html {
 
 .sectionLinks {
     font-size: 1.25rem;
-    color: #0275d8;
+    color: #f05623;
     text-decoration: none;
 }
 
 .sectionLinks h3 {
     font-Size: 1.25rem; 
-    color: #0275d8; 
+    color: #f05623; 
     margin-bottom: 0; 
     font-weight: normal;
 }
@@ -18,10 +18,11 @@ html {
 .sectionLinks p {
     font-size: .75rem; 
     font-style: italic;
+    color: black; 
 }
 
 .sectionHeader h2 {
-    color: #159957; 
+    color: black; 
     font-weight: normal; 
     font-size: 2rem;
 }
@@ -34,4 +35,67 @@ html {
 
 .sectionHeader li p {    
     font-size: .75rem;
+}
+
+.socialMedia {
+    display: flex;
+    justify-content: center;
+}
+
+.socialMedia div {
+    height: 38px;
+    width: 38px;    
+    margin: 0 .5rem;
+    display: inline-block;
+}
+
+.socialMedia div a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    background-color: #6b6d6f;
+    color: black;
+}
+
+.socialMedia div a svg {
+    height: 20px;
+    width: 20px;
+}
+
+.socialMedia .fb:hover {
+    color: white;
+    background-color: #1778f2;
+}
+
+.socialMedia .twitter:hover {
+    color: white;
+    background-color: #1da1f2;
+}
+
+.socialMedia .gh:hover {
+    color: black;
+    background-color: white;
+}
+
+.socialMedia .twitch:hover {
+    color: white;
+    background-color: #6441a4;
+}
+
+.socialMedia .discord:hover {
+    color: white;
+    background-color: #7289da;
+}
+
+.socialMedia .linkedin:hover {
+    color: white;
+    background-color: #0077b5;
+}
+
+.socialMedia .yt:hover {
+    color: white;
+    background-color: #e52d27;
 }

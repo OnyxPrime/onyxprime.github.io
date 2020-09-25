@@ -19,13 +19,20 @@ const Layout = ({ children }) => {
         siteMetadata {
           title
         }
+      }      
+      mobileImage: file(relativePath: { eq: "logo-with-white-icon.png" }) {
+        childImageSharp {
+          fixed(width: 42, height: 42) {
+            ...GatsbyImageSharpFixed
+          }
+        }
       }
     }
   `)
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={data.site.siteMetadata.title} logo={data.mobileImage.childImageSharp.fixed} />
       <div
         style={{
           margin: `0 auto`,

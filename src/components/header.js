@@ -1,9 +1,11 @@
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 import PropTypes from "prop-types"
 import React from "react"
 import "../../node_modules/@material/layout-grid/dist/mdc.layout-grid.css"
+import SocialMedia from "./social_media"
 
-const Header = ({ siteTitle }) => (
+const Header = ({ logo }) => (
   <header
     style={{
      
@@ -17,8 +19,8 @@ const Header = ({ siteTitle }) => (
             <div style={{ fontSize: `1.1rem`, fontFamily: `-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
                         color: `black`, fontWeight: `bold`}}>
               <Link to="/" style={{textDecoration: `none`, color: `black`, fontStyle: `none`}}>
-              <img style={{height: `42px`, verticalAlign: `middle`, marginBottom: `0`}} src={`/me_small.png`} alt="hand drawn profile of Ryan" />
-              Ryan Overton
+              <Img fixed={logo} style={{verticalAlign: `middle`, marginBottom: `0`}} alt="Developers Garage logo" />
+                <text style={{marginLeft: `10px`}}>Ryan Overton</text>
               </Link>
             </div>
           </div>
@@ -44,6 +46,13 @@ const Header = ({ siteTitle }) => (
                     }}>
                 Blog
               </Link>
+              <a href="https://teespring.com/stores/developers-garage" style={{    
+                      margin: `0 10px 0 10px`,                
+                      color: `black`,
+                      textDecoration: `none`,
+                      fontFamily: `-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
+                      fontSize: `.9rem`,
+                    }}>Shop</a>
             </div>
           </div>
         </div>
@@ -75,6 +84,7 @@ const Header = ({ siteTitle }) => (
             padding: `1rem 0rem`}} >
               Exploring cool tech, dev practices and tools used in development
       </h2>
+      <SocialMedia></SocialMedia>
     </div>
   </header>
 )

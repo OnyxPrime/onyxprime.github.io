@@ -16,7 +16,7 @@ figure,
 footer,
 header,
 main {
-  background-color: white;
+  background-color: #e9e8e8;
 },
 menu,
 nav,
@@ -210,7 +210,7 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
-  background: lightgray;
+  background: #6b6d6f; 
 }
 img {
   max-width: 100%;
