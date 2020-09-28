@@ -1,5 +1,5 @@
 import React from "react"
-import { FaFacebookF, FaTwitter, FaGithub, FaLinkedinIn, FaYoutube, FaTwitch, FaDiscord } from "react-icons/fa";
+import { FaFacebook, FaFacebookF, FaTwitter, FaGithubAlt, FaLinkedinIn, FaYoutube, FaTwitch, FaDiscord } from "react-icons/fa";
 import "../../node_modules/@material/layout-grid/dist/mdc.layout-grid.css"
 
 const SocialMedia = () => (
@@ -37,7 +37,7 @@ const SocialMedia = () => (
             </div>
             <div>
                 <a className="gh" href="https://github.com/devsgarage">
-                    <FaGithub />
+                    <FaGithubAlt />
                     <span className="screen-reader-text">GitHub</span>
                 </a>
             </div>

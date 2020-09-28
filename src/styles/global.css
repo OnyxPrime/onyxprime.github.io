@@ -60,18 +60,36 @@ html {
     align-items: center;
     justify-content: center;
     border-radius: 24px;
+    border-width: 0px;
     background-color: #6b6d6f;
     color: black;
 }
 
 .socialMedia div a svg {
-    height: 20px;
-    width: 20px;
+    height: 1.25em;
+    width: 1.25em;
+    
+}
+
+.socialMedia .fb {
+    background-color: #6b6d6f;
+}
+
+.socialMedia .fb svg {
+    height: 1.65em;
+    width: 1.65em;
+    margin-top:.5em;
+    margin-left:.15em;
+    border-radius: 0 0 17px 0px 
 }
 
 .socialMedia .fb:hover {
     color: white;
-    background-color: #1778f2;
+    background-color: #1877f2;
+}
+
+.socialMedia .twitter svg {
+    margin-left: 0.05em;
 }
 
 .socialMedia .twitter:hover {
@@ -79,14 +97,28 @@ html {
     background-color: #1da1f2;
 }
 
+.socialMedia .gh svg {
+    height: 1.5em;
+    width: 1.5em;
+}
+
 .socialMedia .gh:hover {
     color: black;
     background-color: white;
 }
 
+.socialMedia .twitch svg {
+    margin-top: .1em;
+    margin-left:.1em;
+}
+
 .socialMedia .twitch:hover {
     color: white;
     background-color: #6441a4;
+}
+
+.socialMedia .discord svg {
+    margin-top:.15em;
 }
 
 .socialMedia .discord:hover {
