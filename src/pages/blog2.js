@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 
-const Blog = () => (
+const Blog2 = () => (
     <Layout>
         <div style={{height: `calc(100vh - 20.25rem)`}}>
             
@@ -10,4 +10,4 @@ const Blog = () => (
     </Layout>
 );
 
-export default Blog;
+export default Blog2;

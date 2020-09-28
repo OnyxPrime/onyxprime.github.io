@@ -21,6 +21,10 @@ html {
     color: black; 
 }
 
+.sectionLinks img {
+    margin-bottom: 0;
+}
+
 .sectionHeader h2 {
     color: black; 
     font-weight: normal; 
@@ -109,3 +113,53 @@ html {
     position: absolute!important;
     width: 1px;
 }
+
+.hideMe {
+    display: none;
+}
+
+.blog-list-container {
+    padding: 1rem 0;
+}
+
+.blog-list {
+    list-style-type: none;
+}
+
+@media only screen and (max-width: 1024px) {   
+
+    .socialMedia .fb {
+        color: white;
+        background-color: #1778f2;
+    }
+
+    .socialMedia .twitter {
+        color: white;
+        background-color: #1da1f2;
+    }
+
+    .socialMedia .gh {
+        color: black;
+        background-color: white;
+    }
+
+    .socialMedia .twitch {
+        color: white;
+        background-color: #6441a4;
+    }
+
+    .socialMedia .discord {
+        color: white;
+        background-color: #7289da;
+    }
+
+    .socialMedia .linkedin {
+        color: white;
+        background-color: #0077b5;
+    }
+
+    .socialMedia .yt {
+        color: white;
+        background-color: #e52d27;
+    }
+  }

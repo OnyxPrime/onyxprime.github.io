@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import dateformat from "../../node_modules/dateformat/lib/dateformat"
 import indexStyles from "../styles/index.module.css"
 
-function getFormattedValue(start, end){              
+function getFormattedValue(start, end) {              
   let start_date = new Date(start);
     let end_date = new Date(end);        
     let event_date = "Not the same";
@@ -17,6 +17,37 @@ function getFormattedValue(start, end){
 
     return event_date
 }
+
+function getSrcUrl(data) {  
+  if (data.length > 0){
+    return data[0].url;
+  }
+  else
+  {
+    return " ";
+  }
+}
+
+function getSrcDescription(data) {
+  if (data.length > 0){
+    return data[0].description;
+  }
+  else
+  {
+    return " ";
+  }
+}
+
+function srcExists(data){
+  if (data.length > 0){
+    return '';
+  }
+  else
+  {
+    return 'hideMe';
+  }
+}
+
 const IndexPage = ({ data }) => (
   <Layout>
     <div className={"mdc-layout-grid " + indexStyles.topSection}>
@@ -27,6 +58,9 @@ const IndexPage = ({ data }) => (
               {data.allKontentItemBlog.edges.map(({ node }) => (
                 <li key={node.id}>
                 <Link className="sectionLinks" to={'blog/' + node.elements.url_slug.value}>
+                  <img src={getSrcUrl(node.elements.teaser_image.value)} 
+                        alt={getSrcDescription(node.elements.teaser_image.value)}
+                        className={srcExists(node.elements.teaser_image.value)}></img>
                   <h3>{node.elements.blog_title.value}</h3>
                   <p>{node.elements.publish_date.value}</p>   
                 </Link>               
@@ -67,7 +101,7 @@ export default IndexPage
 
 export const query = graphql`
 query MyQuery {
-  allKontentItemBlog (sort: {fields: elements___publish_date___value, order: ASC}) {
+  allKontentItemBlog (limit: 3 sort: {fields: elements___publish_date___value, order: DESC}) {
     edges {
       node {
         id
@@ -80,6 +114,12 @@ query MyQuery {
           }
           url_slug {
             value
+          }
+          teaser_image {
+            value {
+              url
+              description
+            }
           }
         }
       }

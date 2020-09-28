@@ -12,19 +12,19 @@ const Header = ({ logo }) => (
       alignItems: `center`
     }}
   >
-    <nav style={{height: `54px`, backgroundColor: `#f05623`}}>
-      <div className="mdc-layout-grid" style={{padding: `0`, height: `54px`, maxWidth: `60rem`}}>
-        <div className="mdc-layout-grid__inner" style={{height: `54px`}}>
-          <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-middle">            
+    <nav style={{height: `3rem`, backgroundColor: `#f05623`, position: 'fixed', top: '0', width: '100%', zIndex: '500'}}>
+      <div className="mdc-layout-grid" style={{padding: `0`, height: `3rem`, maxWidth: `60rem`}}>
+        <div className="mdc-layout-grid__inner" style={{height: `3rem`}}>
+          <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--align-middle">            
             <div style={{ fontSize: `1.1rem`, fontFamily: `-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
-                        color: `black`, fontWeight: `bold`}}>
+                        color: `black`, fontWeight: `bold`, marginLeft: `.5rem`}}>
               <Link to="/" style={{textDecoration: `none`, color: `black`, fontStyle: `none`}}>
               <Img fixed={logo} style={{verticalAlign: `middle`, marginBottom: `0`}} alt="Developers Garage logo" />
-                <text style={{marginLeft: `10px`}}>Ryan Overton</text>
+                <span style={{marginLeft: `10px`}}>Ryan Overton</span>
               </Link>
             </div>
           </div>
-          <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-middle">
+          <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--align-middle">
             <div style={{ display: `flex`, justifyContent: `flex-end`}}>              
               <Link to="/about"
                     style={{    
@@ -61,6 +61,7 @@ const Header = ({ logo }) => (
     <div
       style={{
         margin: `0 auto`,
+        marginTop: '3rem',
         padding: `1rem 1rem`,
         backgroundImage: `url(/assets/black-gray.png)`,
         backgroundSize: `30rem`
@@ -69,7 +70,8 @@ const Header = ({ logo }) => (
       <img style={{
         margin: `auto`,
         display: `block`,
-        height: `8rem`
+        height: `8rem`,
+        objectFit: `scale-down`
       }} src="/assets/developers-garage-color.png" alt="Developers Garage Logo" />
       <h2
           style={{
