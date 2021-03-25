@@ -45,4 +45,8 @@ exports.onCreateNode = ({ node, actions }) => {
           },
         })  
       })
+      createPage({
+        path: `/about`,
+        component: path.resolve('./src/templates/about-template.js'),        
+      })
   }
