@@ -1,12 +1,16 @@
+import { RichTextElement } from "@kentico/gatsby-kontent-components/dist/rich-text-element"
+import { graphql } from 'gatsby'
+import { node } from "prop-types"
 import React from "react"
 import Layout from "../components/layout"
 
-const About = () => {
+const About = ({data}) => {
+    const richTextElement = data.kontentItemAbout.elements.body
     return(
         <Layout>                
             <div className="mdc-layout-grid">
                 <div className="mdc-layout-grid__inner"> 
-                    <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                    {/* <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                         <h1 style={{fontWeight: `normal`, color: `#159957`}}>About me</h1>
                         <p>My name is Ryan Overton. I'm a software developer with 10 years of professional experience with Microsoft technologies. I have learned a breadth of development technologies for desktop (WinForms, WPF, UWA, and UWP), web (WebForms, MVC, AngularJs, and Angular), and mobile (Windows CE, Windows Mobile, Windows Phone 7/8/8.1, and Xamarin). I'm a proponent of cloud-based solutions, as well as, environments promoting agility, collaboration, innovation and failure as an option.</p>    
                     </div>                           
@@ -22,8 +26,23 @@ const About = () => {
                     
                     <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                         <p>I love discussing technology and how it can make our lives better, as well as, experiment with new emerging technologies. If you ever want to chat, or need someone to bounce ideas against, hit me up at any of the links below!</p>
-                    </div>                           
-                    
+                    </div>                            */}
+                    <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">                        
+                        <RichTextElement 
+                            value={richTextElement.value} 
+                            images={richTextElement.images}
+                            resolveImage={image => {
+                                return (
+                                    <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mdc-layout-grid__cell--align-center">                                                                             
+                                        <img style={{display:`block`, marginLeft: `auto`, marginRight: `auto`, marginBottom: '0', border: `none`}}
+                                            src={image.url}
+                                            alt={image.description ? image.description : ""}
+                                        />
+                                        <p style={{textAlign: `center`, margin: `0`}}>{image.description ? image.description : ""}</p>
+                                    </div>
+                                )
+                              }}/>
+                    </div>
                 </div>
             </div>
         </Layout>
@@ -31,3 +50,22 @@ const About = () => {
 }
 
 export default About;
+
+export const query = 
+    graphql`
+    query($id: String!) {  
+            kontentItemAbout(id: { eq: $id }) {
+              id
+              elements {
+                body {
+                  value
+                  images {
+                    description
+                    url
+                    image_id
+                  }
+                }
+              }
+            }
+    }
+    `

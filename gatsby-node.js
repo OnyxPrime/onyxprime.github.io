@@ -4,7 +4,7 @@ exports.onCreateNode = ({ node, actions }) => {
 
   exports.createPages = async ({graphql, actions}) => {
       const { createPage } = actions
-      const result = await graphql(`
+      let result = await graphql(`
         query {
             allKontentItemBlog {
               edges {
@@ -45,8 +45,22 @@ exports.onCreateNode = ({ node, actions }) => {
           },
         })  
       })
+
+      // Create about page
+      result = await graphql(`
+      query {
+        kontentItemAbout {
+          id
+        }
+      }
+      `)
+      
+      console.log(result);
       createPage({
         path: `/about`,
-        component: path.resolve('./src/templates/about-template.js'),        
+        component: path.resolve('./src/templates/about-template.js'),    
+        context: {
+          id: result.data.kontentItemAbout.id
+        }    
       })
   }
