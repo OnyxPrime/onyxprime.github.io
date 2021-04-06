@@ -12,7 +12,16 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },    
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        cssLoaderOptions: {
+          camelCase: true,
+        },
+      },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

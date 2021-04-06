@@ -2,7 +2,9 @@ import React from "react"
 import Layout from "../components/layout"
 import { Link, graphql } from "gatsby"
 import dateformat from "../../node_modules/dateformat/lib/dateformat"
-import indexStyles from "../styles/index.module.css"
+import {topSection, liveStreamSection} from "../styles/index.module.css"
+// import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 function getFormattedValue(start, end) {              
   let start_date = new Date(start);
@@ -50,7 +52,7 @@ function srcExists(data){
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <div className={"mdc-layout-grid " + indexStyles.topSection}>
+    <div className={"mdc-layout-grid " + topSection}>
       <div className="mdc-layout-grid__inner"> 
           <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 sectionHeader" style={{ borderStyle: `solid`, borderWidth: `0px 1px 0px 0px`, borderColor: `#f05623`}}>
             <h2>Blog</h2>
@@ -88,7 +90,7 @@ const IndexPage = ({ data }) => (
       <hr style={{margin: `0px 1rem`, opacity: `100%`, height: `1px`, background: `#f05623`}}/>
       <div className="mdc-layout-grid">
         <div className="mdc-layout-grid__inner">
-          <div className={"mdc-layout-grid__cell mdc-layout-grid__cell--span-12 sectionHeader " + indexStyles.liveStreamSection}>
+          <div className={"mdc-layout-grid__cell mdc-layout-grid__cell--span-12 sectionHeader " + liveStreamSection}>
             <h2>{data.kontentItemPageContent.elements.title.value}</h2>
             <div dangerouslySetInnerHTML={{ __html:data.kontentItemPageContent.elements.body.value }} />
           </div>
