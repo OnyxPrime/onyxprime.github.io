@@ -82,7 +82,7 @@ export default ({ data, location }) => {
 }
 export const query = 
     graphql`
-    query($id: String!) {  
+    query PostQuery ($id: String!) {  
         kontentItemBlog(id: { eq: $id }) { 
             id
             elements {

@@ -5,7 +5,7 @@ exports.onCreateNode = ({ node, actions }) => {
   exports.createPages = async ({graphql, actions}) => {
       const { createPage } = actions
       let result = await graphql(`
-        query {
+        query InitialItemQuery {
             allKontentItemBlog {
               edges {
                 node {
@@ -48,7 +48,7 @@ exports.onCreateNode = ({ node, actions }) => {
 
       // Create about page
       result = await graphql(`
-      query {
+      query InitialAboutQuery {
         kontentItemAbout {
           id
         }

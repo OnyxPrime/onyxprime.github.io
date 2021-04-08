@@ -62,7 +62,7 @@ export default About;
 
 export const query = 
     graphql`
-    query($id: String!) {  
+    query AboutQuery ($id: String!) {  
             kontentItemAbout(id: { eq: $id }) {
               id
               elements {
