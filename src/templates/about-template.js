@@ -1,11 +1,15 @@
-import { RichTextElement } from "@kentico/gatsby-kontent-components/dist/rich-text-element"
+import { RichTextElement, ImageElement } from "@kentico/gatsby-kontent-components"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql } from 'gatsby'
 import { node } from "prop-types"
 import React from "react"
 import Layout from "../components/layout"
+import * as style from "../styles/about.module.css"
+// import Img from "gatsby-image"
+
 
 const About = ({data}) => {
-    const richTextElement = data.kontentItemAbout.elements.body
+    const richTextElement = data.kontentItemAbout.elements.body;    
     return(
         <Layout>                
             <div className="mdc-layout-grid">
@@ -31,13 +35,18 @@ const About = ({data}) => {
                         <RichTextElement 
                             value={richTextElement.value} 
                             images={richTextElement.images}
-                            resolveImage={image => {
+                            resolveImage={image => {  
                                 return (
-                                    <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mdc-layout-grid__cell--align-center">                                                                             
-                                        <img style={{display:`block`, marginLeft: `auto`, marginRight: `auto`, marginBottom: '0', border: `none`}}
-                                            src={image.url}
-                                            alt={image.description ? image.description : ""}
-                                        />
+                                    <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mdc-layout-grid__cell--align-center">                                                                                                                                                                    
+                                        <ImageElement
+                                            image={image}
+                                            layout="fixed"
+                                            width={641}
+                                            height={404}
+                                            backgroundColor="#bbbbbb"
+                                            className={style.aboutImage}                                            
+                                            alt={image.description}
+                                        />   
                                         <p style={{textAlign: `center`, margin: `0`}}>{image.description ? image.description : ""}</p>
                                     </div>
                                 )
@@ -53,7 +62,7 @@ export default About;
 
 export const query = 
     graphql`
-    query($id: String!) {  
+    query AboutQuery ($id: String!) {  
             kontentItemAbout(id: { eq: $id }) {
               id
               elements {

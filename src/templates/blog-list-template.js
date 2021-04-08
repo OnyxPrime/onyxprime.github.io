@@ -78,7 +78,7 @@ export default ({data, pageContext}) => {
 }
 
 export const query = graphql`
-  query query($skip: Int!, $limit: Int!) {
+  query BlogListQuery($skip: Int!, $limit: Int!) {
     allKontentItemBlog(
       sort: { fields: elements___publish_date___value, order: DESC }
       limit: $limit
