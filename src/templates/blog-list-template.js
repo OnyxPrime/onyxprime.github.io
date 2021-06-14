@@ -50,7 +50,7 @@ export default ({data, pageContext}) => {
                     // return <div key={node.elements.url_slug.value}>{title}</div>
 
                     <li key={node.id}>
-                    <Link className="sectionLinks" to={'blog/' + node.elements.url_slug.value}>
+                    <Link className="sectionLinks" to={'/blog/' + node.elements.url_slug.value}>
                         <img src={getSrcUrl(node.elements.teaser_image.value)} 
                             alt={getSrcDescription(node.elements.teaser_image.value)}
                             className={srcExists(node.elements.teaser_image.value)}></img>
