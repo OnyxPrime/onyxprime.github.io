@@ -70,7 +70,7 @@ export default ({ data, location }) => {
                 resolveLink={(link, domNode) => {
                   const parentItemType = contextData.type // It is possible to use external data for resolution                                    
                   return (                    
-                    <Link to={`/${parentItemType}/${link.urlSlug}`}>
+                    <Link to={`/${parentItemType}/${link.url_slug}`}>
                       {domNode.children[0].data}
                     </Link>
                   )
