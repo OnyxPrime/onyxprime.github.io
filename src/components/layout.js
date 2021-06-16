@@ -6,6 +6,7 @@
  */
 
 import React from "react"
+import Helmet from "react-helmet"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -32,6 +33,11 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Helmet>
+      <script>
+          {`(function () {var a=document.createElement("script");a.type="text/javascript",a.src="https://global.ketchcdn.com/web/v1/config/ryan_sandbox/web/boot.js",a.defer=a.async=!0,document.getElementsByTagName("head")[0].appendChild(a),window.semaphore=window.semaphore||[];})();`}
+      </script>
+      </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} logo={data.mobileImage.childImageSharp.fixed} />
       <div
         style={{
@@ -55,6 +61,7 @@ const Layout = ({ children }) => {
           © Copyright {new Date().getFullYear()} 
           ,&nbsp;
           <span style={{color: `#f05623`}}>Developers Garage</span>.&nbsp;all rights reserved.
+          <a href="#" onClick={ () => {window.semaphore.push(['showPreferences'])}}>Privacy Settings</a>
         </footer>
     </>
   )
