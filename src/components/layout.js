@@ -61,7 +61,7 @@ const Layout = ({ children }) => {
           © Copyright {new Date().getFullYear()} 
           ,&nbsp;
           <span style={{color: `#f05623`}}>Developers Garage</span>.&nbsp;all rights reserved.
-          <a href="#" onClick={ () => {window.semaphore.push(['showPreferences'])}}>Privacy Settings</a>
+          <a href="#" style={{color: `#f05623`, marginLeft: `5px`}} onClick={ () => {window.semaphore.push(['showPreferences'])}}>Privacy Settings</a>
         </footer>
     </>
   )
