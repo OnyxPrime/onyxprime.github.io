@@ -37,6 +37,9 @@ const Layout = ({ children }) => {
       <script>
           {`(function () {var a=document.createElement("script");a.type="text/javascript",a.src="https://global.ketchcdn.com/web/v1/config/ryan_sandbox/web/boot.js",a.defer=a.async=!0,document.getElementsByTagName("head")[0].appendChild(a),window.semaphore=window.semaphore||[];})();`}
       </script>
+      <script>
+        
+      </script>
       </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} logo={data.mobileImage.childImageSharp.fixed} />
       <div
