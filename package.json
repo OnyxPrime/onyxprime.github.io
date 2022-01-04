@@ -8,7 +8,7 @@
     "@kentico/gatsby-kontent-components": "^7.0.0",
     "@kentico/gatsby-source-kontent": "^7.0.0",
     "@ketch-sdk/ketch-tag": "^1.0.3",
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "babel-polyfill": "^6.26.0",
     "dateformat": "^4.5.1",
     "gatsby": "^3.7.1",
