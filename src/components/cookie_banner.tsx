@@ -28,7 +28,9 @@ export const CookieBanner: Plugin = {
 }
 
 let updateConsent = (host, consents) => {
-    consents.purposes.analytics = false;
+    for (let p of Object.keys(consents.purposes)) {
+        consents.purposes[p] = false
+    }
     host.changeConsent(consents);
     console.log('Cookie banner updated')
     hideConsentExperience();
