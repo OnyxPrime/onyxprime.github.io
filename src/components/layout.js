@@ -9,6 +9,7 @@ import React from "react"
 import Helmet from "react-helmet"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { RegisterCookieBannerPlugin } from './cookie_banner'
 
 import Header from "./header"
 import "./layout.css"
@@ -37,9 +38,7 @@ const Layout = ({ children }) => {
       <script>
           {`(function () {var a=document.createElement("script");a.type="text/javascript",a.src="https://global.ketchcdn.com/web/v1/config/ryan_sandbox/web/boot.js",a.defer=a.async=!0,document.getElementsByTagName("head")[0].appendChild(a),window.semaphore=window.semaphore||[];})();`}
       </script>
-      <script>
-        
-      </script>
+      {RegisterCookieBannerPlugin()}
       </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} logo={data.mobileImage.childImageSharp.fixed} />
       <div
