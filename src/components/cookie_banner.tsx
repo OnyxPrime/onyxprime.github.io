@@ -49,6 +49,9 @@ declare global {
 }
 
 export const RegisterCookieBannerPlugin = () => {
+    const isBrowser = () => typeof window !== "undefined"
+    if (!isBrowser()) 
+        return;
     console.log('Cookie banner registered')
     window.semaphore = window.semaphore || []
     window.semaphore.push(['registerPlugin', CookieBanner])
