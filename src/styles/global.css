@@ -136,6 +136,11 @@ html {
     background-color: #e52d27;
 }
 
+.socialMedia .mediumblog:hover {
+    color: black;
+    background-color: white;
+}
+
 .screen-reader-text {
     border: 0;
     clip: rect(1px,1px,1px,1px);
@@ -195,7 +200,7 @@ html {
         background-color: #e52d27;
     }
 
-    .socialMedia .medium {
+    .socialMedia .mediumblog {
         color: black;
         background-color: white;
     }

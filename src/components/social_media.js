@@ -48,7 +48,7 @@ const SocialMedia = () => (
                 </a>
             </div>
             <div>
-                <a className="medium" href="https://medium.com/@ryan.overton">
+                <a className="mediumblog" href="https://medium.com/@ryan.overton">
                     <FaMedium />
                     <span className="screen-reader-text">LinkedIn</span>
                 </a>
