@@ -1,5 +1,5 @@
 import React from "react"
-import { FaFacebook, FaFacebookF, FaTwitter, FaGithubAlt, FaLinkedinIn, FaYoutube, FaTwitch, FaDiscord } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaGithubAlt, FaLinkedinIn, FaYoutube, FaTwitch, FaDiscord, FaMedium } from "react-icons/fa";
 import "../../node_modules/@material/layout-grid/dist/mdc.layout-grid.css"
 
 const SocialMedia = () => (
@@ -44,6 +44,12 @@ const SocialMedia = () => (
             <div>
                 <a className="linkedin" href="https://linkedin.com/in/rpoverton">
                     <FaLinkedinIn />
+                    <span className="screen-reader-text">LinkedIn</span>
+                </a>
+            </div>
+            <div>
+                <a className="medium" href="https://medium.com/@ryan.overton">
+                    <FaMedium />
                     <span className="screen-reader-text">LinkedIn</span>
                 </a>
             </div>
