@@ -31,7 +31,7 @@ let updateConsent = (host, consents) => {
     for (let p of Object.keys(consents.purposes)) {
         consents.purposes[p] = false
     }
-    host.changeConsent(consents);
+    host.setConsent(consents);
     console.log('Cookie banner updated')
     hideConsentExperience();
 }
